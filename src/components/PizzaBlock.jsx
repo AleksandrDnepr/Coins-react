@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Estonia from '../assets/img/estonia.svg'
 
 
 function PizzaBlock(props) {
@@ -12,23 +13,23 @@ setPizzaCount(pizzaCount+1)
         <div className="pizza-block">
               <img
                 className="pizza-block__image"
-                src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                src={Estonia}
                 alt="Pizza"
               />
-              <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+              <h4 className="pizza-block__title">ESTONIA 2 EURO 2022 UNC UKRAINA</h4>
               <div className="pizza-block__selector">
                 <ul>
-                  <li className="active">тонкое</li>
-                  <li>традиционное</li>
+                  <li className="active">case</li>
+                  <li>capsule</li>
                 </ul>
                 <ul>
-                  <li className="active">26 см.</li>
-                  <li>30 см.</li>
-                  <li>40 см.</li>
+                  <li className="active">32 mm.</li>
+                  <li>42 mm.</li>
+                  <li>52 mm.</li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
-                <div className="pizza-block__price">от 395 ₽</div>
+                <div className="pizza-block__price">7 euro</div>
                 <button onClick={onClickAdd} className="button button--outline button--add">
                   <svg
                     width="12"
@@ -42,7 +43,7 @@ setPizzaCount(pizzaCount+1)
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span>Add</span>
                   <i>{pizzaCount}</i>
                 </button>
               </div>

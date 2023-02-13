@@ -16,14 +16,14 @@ function Sort(props) {
         fill="#2C2C2C"
       />
     </svg>
-    <b>Сортировка по:</b>
-    <span>популярности</span>
+    <b>Sorted by:</b>
+    <span>popular</span>
   </div>
   <div className="sort__popup">
     <ul>
-      <li className="active">популярности</li>
-      <li>цене</li>
-      <li>алфавиту</li>
+      <li className="active">popular</li>
+      <li>price</li>
+      <li>name</li>
     </ul>
   </div>
 </div>
