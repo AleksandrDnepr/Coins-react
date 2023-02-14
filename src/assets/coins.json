@@ -74,7 +74,7 @@
       "nominal": 5,
       "category": 1,
       "rating": 9,
-      "material": "german silver"
+      "material": "German silver"
     },
     {
       "id": 7,
@@ -85,7 +85,7 @@
       "nominal": 5,
       "category": 1,
       "rating": 9,
-      "material": "german silver"
+      "material": "German silver"
     },
     {
       "id": 8,
@@ -96,6 +96,6 @@
       "nominal": 5,
       "category": 1,
       "rating": 9,
-      "material": "german silver"
+      "material": "German silver"
     }
   ]

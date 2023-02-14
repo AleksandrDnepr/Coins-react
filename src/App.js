@@ -3,7 +3,7 @@ import './scss/app.scss'
 import Header from './components/Header';
 import Categories from './components/Categories';
 import Sort from './components/Sort';
-import PizzaBlock from './components/PizzaBlock';
+import CoinBlock from './components/CoinBlock';
 
 
 import coins from './assets/coins.json'
@@ -21,8 +21,8 @@ function App() {
           </div>
           <h2 className="content__title">All coins</h2>
           <div className="content__items">
-            {coins.map((coin, index)=>(
-              <PizzaBlock key ={index} title={coin.title} price={coin.price} image={coin.imageUrl}/>
+            {coins.map((coin, index) => (
+              <CoinBlock key={index} title={coin.title} price={coin.price} image={coin.imageUrl} nominal={coin.nominal} material={coin.material} types={coin.types} />
             ))}
           </div>
         </div>

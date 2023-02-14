@@ -6,7 +6,7 @@ function Header() {
         <div className="header">
   <div className="container">
     <div className="header__logo">
-      <img width="38" src={coinLogo} alt="Pizza logo" />
+      <img width="38" src={coinLogo} alt="Coin logo" />
       <div>
         <h1>Europa coins</h1>
         <p>friendly coins for Ukraine</p>
