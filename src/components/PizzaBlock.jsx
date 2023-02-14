@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Estonia from '../assets/img/estonia.svg'
 
 
+
 function PizzaBlock(props) {
     const [pizzaCount, setPizzaCount]=useState(0)
 
@@ -13,10 +14,10 @@ setPizzaCount(pizzaCount+1)
         <div className="pizza-block">
               <img
                 className="pizza-block__image"
-                src={Estonia}
+                src={props.image}
                 alt="Pizza"
               />
-              <h4 className="pizza-block__title">ESTONIA 2 EURO 2022 UNC UKRAINA</h4>
+              <h4 className="pizza-block__title">{props.title}</h4>
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">case</li>
@@ -29,7 +30,7 @@ setPizzaCount(pizzaCount+1)
                 </ul>
               </div>
               <div className="pizza-block__bottom">
-                <div className="pizza-block__price">7 euro</div>
+                <div className="pizza-block__price">{props.price} euro</div>
                 <button onClick={onClickAdd} className="button button--outline button--add">
                   <svg
                     width="12"

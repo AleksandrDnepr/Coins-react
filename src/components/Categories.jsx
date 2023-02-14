@@ -12,14 +12,7 @@ setActiveIndex(index)
 <ul>
   {categories.map((item,index)=>{
     return <li key ={index} onClick={()=>{setActiveClass(index)}} className={(activeIndex===index)?"active":""}>{item}</li>
-  })}</ul>
-  {/* <ul><li className="active">Все</li>
-  <li>Gold</li>
-  <li>Silver</li>
-  <li>Classic</li>
-  <li>Charity</li>
-  <li>Bons</li>
-</ul>  */}
+  })}</ul> 
 </div>
     );
 }

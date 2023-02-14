@@ -6,6 +6,9 @@ import Sort from './components/Sort';
 import PizzaBlock from './components/PizzaBlock';
 
 
+import coins from './assets/coins.json'
+
+
 function App() {
   return (
     <div className="wrapper">
@@ -18,13 +21,9 @@ function App() {
           </div>
           <h2 className="content__title">All coins</h2>
           <div className="content__items">
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
-            <PizzaBlock />
+            {coins.map((coin, index)=>(
+              <PizzaBlock key ={index} title={coin.title} price={coin.price} image={coin.imageUrl}/>
+            ))}
           </div>
         </div>
       </div>
