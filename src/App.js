@@ -13,7 +13,7 @@ function App() {
     fetch("https://63ed0891f1ec53805dd7d64a.mockapi.io/coins")
     .then((res)=>res.json())
     .then((res)=>setCoins(res))
-  })
+  },[])
   return (
     <div className="wrapper">
       <Header />
