@@ -1,6 +1,16 @@
 import React from 'react';
+const menuItems=["popular", "price", "name"]
 
 function Sort(props) {
+  const [open, setOpen]= React.useState(false)
+  const [activeType, setActiveType]=React.useState(0)
+
+const onClickMenuItem=(item)=>{
+  setActiveType(item)
+setOpen(false)
+}
+
+
     return (
         <div className="sort">
   <div className="sort__label">
@@ -17,15 +27,20 @@ function Sort(props) {
       />
     </svg>
     <b>Sorted by:</b>
-    <span>popular</span>
+    <span onClick={()=>setOpen(!open)}>{menuItems[activeType]}</span>
   </div>
-  <div className="sort__popup">
+  {open&&(<div className="sort__popup">
     <ul>
-      <li className="active">popular</li>
-      <li>price</li>
-      <li>name</li>
-    </ul>
-  </div>
+  {menuItems.map((item, i) => (
+            <li
+              key={i}
+              onClick={() => onClickMenuItem(i)}
+              className={activeType === i ? 'active' : ''}>
+              {item}
+            </li>
+          ))}
+          </ul>
+  </div>)}
 </div>
     );
 }
