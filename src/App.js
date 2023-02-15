@@ -22,7 +22,7 @@ function App() {
           <h2 className="content__title">All coins</h2>
           <div className="content__items">
             {coins.map((coin, index) => (
-              <CoinBlock key={index} title={coin.title} price={coin.price} image={coin.imageUrl} nominal={coin.nominal} material={coin.material} types={coin.types} />
+              <CoinBlock key={index} {...coin} />
             ))}
           </div>
         </div>
