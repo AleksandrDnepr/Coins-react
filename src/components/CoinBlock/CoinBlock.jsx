@@ -4,6 +4,7 @@ function CoinBlock({ title, nominal, types, price, imageUrl }) {
   const [activeType, setActiveType] = React.useState(0);
   const typeNames = ['Case', 'Capsule'];
   return (
+    <div className="coin-block-wrapper">
     <div className="coin-block">
       <img className="coin-block__image" src={imageUrl} alt="coin" />
       <h4 className="coin-block__title">{title}</h4>
@@ -40,6 +41,7 @@ function CoinBlock({ title, nominal, types, price, imageUrl }) {
           <i>0</i>
         </button>
       </div>
+    </div>
     </div>
   );
 }
