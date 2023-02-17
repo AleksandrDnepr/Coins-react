@@ -1,10 +1,14 @@
 import React from 'react';
 import coinLogo from '../assets/img/coin-svgrepo-com.svg';
+import {
+  Link
+} from "react-router-dom";
 
 function Header() {
   return (
     <div className="header">
       <div className="container">
+        <Link to="/">
         <div className="header__logo">
           <img width="38" src={coinLogo} alt="Coin logo" />
           <div>
@@ -12,6 +16,8 @@ function Header() {
             <p>the best for Ukraine</p>
           </div>
         </div>
+        </Link>
+        <Link to = "/Cart">
         <div className="header__cart">
           <a href="/cart.html" className="button button--cart">
             <span>7 euro</span>
@@ -47,6 +53,7 @@ function Header() {
             <span>3</span>
           </a>
         </div>
+        </Link>
       </div>
     </div>
   );
