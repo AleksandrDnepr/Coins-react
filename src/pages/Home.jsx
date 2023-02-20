@@ -19,9 +19,10 @@ function Home(props) {
       }, 1000);
     // setCoins(res)})
     // setIsLoading(false)
+    window.scrollTo(0,0)
   },[])
     return (
-        <>
+      <div className="container">
         <div className="content__top">
             <Categories />
             <Sort />
@@ -30,7 +31,7 @@ function Home(props) {
           <div className="content__items">
             {isLoading?[...new Array(6)].map((_,i)=>{return <Sceleton key={i}/>}):coins.map((coin, index)=>{return <CoinBlock key={index} {...coin} />})}
           </div>
-          </>
+          </div>
     );
 }
 
