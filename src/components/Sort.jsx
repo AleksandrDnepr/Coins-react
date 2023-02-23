@@ -1,12 +1,18 @@
 import React from 'react';
-const menuItems = ['popular', 'price', 'name'];
+const menuItems = [
+  {name:'popular ↑', sort:'rating'},
+  {name:'popular ↓', sort:'-rating'},
+   {name:'price ↑', sort: 'price'}, 
+   {name:'price ↓', sort: '-price'}, 
+   {name:'name ↑', sort:'title'},
+   {name:'name ↓', sort:'-title'}
+  ];
 
-function Sort(props) {
+function Sort({activeType, onChange}) {
   const [open, setOpen] = React.useState(false);
-  const [activeType, setActiveType] = React.useState(0);
 
   const onClickMenuItem = (item) => {
-    setActiveType(item);
+    onChange(item);
     setOpen(false);
   };
 
@@ -25,7 +31,7 @@ function Sort(props) {
           />
         </svg>
         <b>Sorted by:</b>
-        <span onClick={() => setOpen(!open)}>{menuItems[activeType]}</span>
+        <span onClick={() => setOpen(!open)}>{activeType.name}</span>
       </div>
       {open && (
         <div className="sort__popup">
@@ -33,9 +39,9 @@ function Sort(props) {
             {menuItems.map((item, i) => (
               <li
                 key={i}
-                onClick={() => onClickMenuItem(i)}
-                className={activeType === i ? 'active' : ''}>
-                {item}
+                onClick={() => onClickMenuItem(item)}
+                className={activeType.sort === item.sort ? 'active' : ''}>
+                {item.name}
               </li>
             ))}
           </ul>

@@ -4,11 +4,7 @@ function Categories({activeIndex, onChange}) {
   
   const categories = ['All', 'Gold', 'Silver', 'Classic', 'Charity', 'Banknotes'];
 
-  // const setActiveClass = (index) => {
-  //   setActiveIndex(index);
-  // };
 
-  console.log(activeIndex)
   return (
     <div className="categories">
       <ul>
