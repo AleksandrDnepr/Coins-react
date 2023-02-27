@@ -3,6 +3,7 @@ import coinLogo from '../assets/img/coin-svgrepo-com.svg';
 import {
   Link
 } from "react-router-dom";
+import Search from './Search/Search';
 
 function Header() {
   return (
@@ -15,6 +16,7 @@ function Header() {
             <h1>Ukraine coins</h1>
             <p>the best for Ukraine</p>
           </div>
+          <Search />
         </div>
         </Link>
         <div className="header__cart">
