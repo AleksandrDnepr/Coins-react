@@ -1,23 +1,21 @@
 import React from 'react';
 import coinLogo from '../assets/img/coin-svgrepo-com.svg';
-import {
-  Link
-} from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Search from './Search/Search';
 
-function Header() {
+function Header({ searchValue, setSearchValue }) {
   return (
     <div className="header">
       <div className="container">
         <Link to="/">
-        <div className="header__logo">
-          <img width="38" src={coinLogo} alt="Coin logo" />
-          <div>
-            <h1>Ukraine coins</h1>
-            <p>the best for Ukraine</p>
+          <div className="header__logo">
+            <img width="38" src={coinLogo} alt="Coin logo" />
+            <div>
+              <h1>Ukraine coins</h1>
+              <p>the best for Ukraine</p>
+            </div>
+            <Search searchValue={searchValue} setSearchValue={setSearchValue} />
           </div>
-          <Search />
-        </div>
         </Link>
         <div className="header__cart">
           <Link to="/cart" className="button button--cart">

@@ -1,17 +1,43 @@
-.root{
-    position: relative;
-    left: 100px
+.root {
+  position: relative;
+  left: 100px;
 }
 
-.input{
-    padding: 10px;
-    margin: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.2);
+.input {
+  width: 350px;
+  padding: 10px;
+  padding-left: 34px;
+  margin: 10px;
+  opacity: 0.5;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 
-    &:focus{
-        width:400px;
-        border: 1px solid rgba(0,0,0,0.5);
-    }
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+  }
+}
+
+.searchIcon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  opacity: 0.5;
+}
+
+.closeIcon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 20px;
+  top: 22px;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
