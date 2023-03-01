@@ -5,7 +5,7 @@ import Sort from '../components/Sort';
 import CoinBlock from '../components/CoinBlock/CoinBlock';
 import Sceleton from '../components/CoinBlock/Sceleton';
 
-function Home(props) {
+function Home({searchValue}) {
   const [coins, setCoins] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -18,10 +18,11 @@ function Home(props) {
   React.useEffect(() => {
 let addQuery = activeIndex>0 ? `category=${activeIndex}`:''
 let ascOrDesc = activeType.sort.includes('-')?'asc':'desc'
+let search = searchValue?`&search=${searchValue}`:''
 
 let sorting =  `&sortBy=${activeType.sort.replace('-','')}&order=${ascOrDesc}`
     setIsLoading(true);
-    fetch(`https://63ed0891f1ec53805dd7d64a.mockapi.io/coins?${addQuery}${sorting}`)
+    fetch(`https://63ed0891f1ec53805dd7d64a.mockapi.io/coins?${addQuery}${sorting}${search}`)
       .then((res) => res.json())
       .then((res) => {
         setTimeout(() => {
@@ -33,7 +34,7 @@ let sorting =  `&sortBy=${activeType.sort.replace('-','')}&order=${ascOrDesc}`
     // setIsLoading(false)
     window.scrollTo(0, 0);
     
-  }, [activeIndex,activeType]);
+  }, [activeIndex,activeType,searchValue]);
   return (
     <div className="container">
       <div className="content__top">
